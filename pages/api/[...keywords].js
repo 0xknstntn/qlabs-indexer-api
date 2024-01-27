@@ -27,6 +27,10 @@ export default async function handler(req, res) {
                                         url += "/" + req.query.keywords[index]
                                 }
                         }
+                        if (Object.keys(req.query).length > 1) {
+                                url += ("?tokenA=" + req.query.tokenA)
+                                url += ("&tokenB=" + req.query.tokenB)
+                        }
                         
                         var data = await fetch("http://89.108.83.252:5785" + url, {
                                 mode: 'cors',
