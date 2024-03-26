@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
         switch (req.method) {
                 case "POST":
-                        var data = await fetch("https://89.108.83.252:5785", {
+                        var data = await fetch("http://89.108.83.252:5785", {
                                 method: 'POST',
                                 headers: {
                                         'Access-Control-Allow-Origin': '*',
@@ -32,7 +32,7 @@ export default async function handler(req, res) {
                                 url += ("&tokenB=" + req.query.tokenB)
                         }
                         
-                        var data = await fetch("https://89.108.83.252:5785" + url, {
+                        var data = await fetch("http://89.108.83.252:5785" + url, {
                                 mode: 'cors',
                         });
 
